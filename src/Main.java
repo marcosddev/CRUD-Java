@@ -10,12 +10,12 @@ public class Main {
 
         do {
             System.out.println("-------------MENU-----------");
-            System.out.println("1 - Cadastrar Produtos"); 	 	//POST
-            System.out.println("2 - Listar Produtos");	        //GET
-            System.out.println("3 - Procurar produtos por id");	//GET where id=
-            System.out.println("4 - Procurar produtos por nome");//GET where nome like
-            System.out.println("5 - Alterar produto");          //PUT
-            System.out.println("6 - Apagar produto");          //DELETE
+            System.out.println("1 - Cadastrar Produtos"); 	 	
+            System.out.println("2 - Listar Produtos");	        
+            System.out.println("3 - Procurar produtos por id");	
+            System.out.println("4 - Procurar produtos por nome");
+            System.out.println("5 - Alterar produto");          
+            System.out.println("6 - Apagar produto");          
             System.out.println("0 - Sair");
             System.out.println("----------------------------");
             System.out.println("Digite sua opção: ");
