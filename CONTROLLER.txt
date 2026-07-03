@@ -1,0 +1,79 @@
+CONTROLLER 
+
+void alterarPreco(Scanner entrada, int id) {
+        System.out.println("Digite o novo preço: ");
+        double novoPreco = entrada.nextDouble();
+
+        boolean alterou = repositorio.alterarPreco(id, novoPreco);
+
+        if (alterou == true) {
+            System.out.println("Preço do produto alterado com sucesso");
+        } else {
+            System.out.println("Erro ao alterar o preço");
+        }
+
+    }
+
+    void alterarQtde(Scanner entrada, int id) {
+        System.out.println("Digite a nova quantidade: ");
+        int novaQtde = entrada.nextInt();
+
+        boolean alterou = repositorio.alterarPreco(id, novaQtde);
+
+        if (alterou == true) {
+            System.out.println("Preço do produto alterado com sucesso");
+        } else {
+            System.out.println("Erro ao alterar o preço");
+        }
+
+    }
+
+    void alterarTudo(Scanner entrada, int id) {
+        System.out.println("Digite o novo nome: ");
+        String novoNome = entrada.nextLine();
+        entrada.nextLine();
+
+        System.out.println("Digite o novo preço: ");
+        double novoPreco = entrada.nextDouble();
+
+        System.out.println("Digite a nova quantidade: ");
+        int novaQtde = entrada.nextInt();
+
+        boolean alterou = repositorio.alterarTudo(id, novoNome, novoPreco, novaQtde);
+
+        if (alterou == true) {
+            System.out.println("Produto alterado com sucesso");
+        } else {
+            System.out.println("Erro ao alterar o produto");
+        }
+
+    }
+
+    void apagarProduto(Scanner entrada) {
+            System.out.println("Digite o ID do produto que deseja apagar");
+            int id = entrada.nextInt();
+            Produto produto1 = repositorio.buscarPorID(id);
+
+            if (produto1 == null) {
+                System.out.println("Produto não encontrado.");
+                return;
+            }
+
+            System.out.println("Produto Encontrado: ");
+            produto1.listar();
+
+            System.out.println("Deseja realmente apagar este produto? (S/N)");
+            String confirmacao = entrada.next();
+
+            if (confirmacao.equalsIgnoreCase("S")) {
+                boolean apagou = repositorio.apagarProduto(id);
+                if (apagou) {
+                    System.out.println("Produto apagado com sucesso.");
+                } else {
+                    System.out.println("Erro ao apagar o produto.");
+                }
+            } else {
+                System.out.println("Operação de exclusão cancelada.");
+            }
+
+        }

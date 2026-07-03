@@ -1,0 +1,57 @@
+REPOSITORIO
+
+ Boolean alterarPreco(int id, double novoPreco) {
+        Produto produto1 = buscarPorID(id);
+
+        if (produto1 == null) {
+            return false;
+        }
+
+        produto1.preco = novoPreco;
+        return true;
+    }
+
+    Boolean alterarQtde(int id, int novaQtde) {
+        Produto produto1 = buscarPorID(id);
+
+        if (produto1 == null) {
+            return false;
+        }
+
+        produto1.quantidade = novaQtde;
+        return true;
+    }
+
+    Boolean alterarTudo(int id, String novoNome, double novoPreco, int novaQtde) {
+        Produto produto1 = buscarPorID(id);
+
+        if (produto1 == null) {
+            return false;
+        }
+
+        produto1.nome = novoNome;
+        produto1.preco = novoPreco;
+        produto1.quantidade = novaQtde;
+
+        return true;
+    }
+
+    Boolean apagarProduto(int id) {
+        Produto produto1 = buscarPorID(id);
+
+        if (produto1 == null) {
+            return false;
+        }
+
+        for (int i = 0; i < totalProdutos; i++) {
+            if (produtos[i].id == id) {
+                for (int j = i; j < totalProdutos - 1; j++) {
+                    produtos[j] = produtos[j + 1];
+                }
+                produtos[totalProdutos - 1] = null;
+                totalProdutos--;
+                return true;
+            }
+        }
+        return false;
+    }
