@@ -12,7 +12,6 @@ public class ProdutoController {
             Produto produto1 = new Produto();
 
             System.out.print("Digite o id do Produto: ");
-            //<apelido>.atributoDaClasse Ex. prod.id
             produto1.id = entrada.nextInt();
             /* SEMPRE QUE VOCÊ PEDIR PRO USUÁRIO UM NUMERO
                 SEJA ELE INT OU DOUBLE, PRECISA LIMPAR A ENTRADA
@@ -65,7 +64,6 @@ public class ProdutoController {
 
     }
 
-    // contains(nomeBuscado)  Mou  Mouse Logitech Mouse Dell where nome like "%mou%"
     void procurarProdutoPorNome(Scanner entrada) {
         entrada.nextLine();
 
