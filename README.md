@@ -13,7 +13,7 @@ O sistema foi arquitetado de modo a separar claramente o acesso aos dados do flu
 * **Atualização (Update):** Interface para localizar e modificar os atributos de um produto existente de forma segura.
 * **Exclusão (Delete):** Remoção controlada e assertiva de registros do repositório.
 
-# Abordagem Técnica
+## Abordagem Técnica
 * Separação de Preocupações (SoC): A lógica está compartimentada. A entidade apenas armazena seu estado, o repositório efetua ações de I/O, e o controlador lida com as validações de input.
 * Coesão: Ausência de acoplamento excessivo; a manutenção de um fluxo não impacta gravemente os demais.
 * Linguagem Base: Java (JDK) puro, evidenciando domínio das estruturas base da linguagem antes da inserção de frameworks maiores como Spring Boot.
