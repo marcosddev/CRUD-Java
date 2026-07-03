@@ -15,7 +15,7 @@ public class ProdutoRepository {
     void listarProdutos() {
         if (totalProdutos == 0) {
             System.out.println("Sem produtos cadastrados");
-        } else {           //3 < 3
+        } else {           
             for (int i = 0; i < totalProdutos; i++) {
                 produtos[i].listar();
 
@@ -23,7 +23,6 @@ public class ProdutoRepository {
 
         }
     }
-    //3
 
     Produto buscarPorID(int id) {
         for (int i = 0; i < totalProdutos; i++) {
